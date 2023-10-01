@@ -7,7 +7,7 @@ import calcs
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-data = pd.read_csv(r'c:\Users\User\OneDrive\Projects\BennyGrannot\benny.csv', encoding='utf-8')
+data = pd.read_csv(r'c:\Users\User\OneDrive\Projects\BennyGranot\benny.csv', encoding='utf-8')
 
 # fig1, ax = plt.subplots()
 # ax.plot(data.CH1.values)

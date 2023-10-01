@@ -15,6 +15,14 @@ def subLists (lref, lshort, startIdx):
     for idx in range(sz):
         sum += (lref[idx+startIdx] - lshort[idx]) / sz
     return sum
+
+def multListsDiffs (lref, lshort, startIdx):
+    sz : int = len(lshort)
+    sum : float=0.0
+    for idx in range(sz):
+        mean = (lref[idx+startIdx] + lshort[idx]) / 2.0
+        sum += (lref[idx+startIdx] - mean) * (lshort[idx] - mean) / sz
+    return sum
 def corrSeries(ser1, ser2, method : int):
     if method == 1:
         sz = len (ser1)
@@ -44,7 +52,8 @@ def corrSeries(ser1, ser2, method : int):
         resl=[]
         for ind in range(actLen*2):
             #corrRes = subLists(slice1, slice2, ind)
-            corrRes = multLists(slice1, slice2, ind)
+            #corrRes = multLists(slice1, slice2, ind)
+            corrRes = multListsDiffs(slice1, slice2, ind)
             resl.append(corrRes)
             if not ind % 100:
                 print ("ind: {0}\n".format(ind))
