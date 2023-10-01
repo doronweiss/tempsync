@@ -21,8 +21,14 @@ data = pd.read_csv(r'c:\Users\User\OneDrive\Projects\BennyGranot\benny.csv', enc
 res = calcs.corrSeries(data.CH1.values, data.CH2.values, 2)
 fig2, ax = plt.subplots()
 ax.plot(res)
+ax.grid()
 fig2.show()
 
+fig3 = plt.plot()
+fig3.plot(res)
+fig3.grid()
+fig3.show()
+
 #plt.close(fig1)
-plt.close(fig2)
+#plt.close(fig2)
 
