@@ -18,8 +18,12 @@ data = pd.read_csv(r'c:\Users\User\OneDrive\Projects\BennyGranot\benny.csv', enc
 # fig1.show()
 # exit(0)
 
-res = calcs.corrSeries(data.CH1.values, data.CH2.values, 3)
-fig2, ax = plt.subplots()
-ax.plot(res)
-ax.grid()
-fig2.show()
+
+# res = calcs.corrSeries(data.CH1.values, data.CH2.values, 3)
+# fig2, ax = plt.subplots()
+# ax.plot(res)
+# ax.grid()
+# fig2.show()
+
+res = data.CH1.corr(data.CH2)
+print("res: {0}".format(res))
